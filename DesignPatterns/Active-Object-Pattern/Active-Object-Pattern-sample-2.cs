@@ -8,19 +8,19 @@ namespace ActiveObjectPatternExample
 {
     class Program
     {
-        static void Main()
-        {
-            // Creating an instance of the TaskScheduler
-            TaskScheduler taskScheduler = new TaskScheduler();
+        //static void Main()
+        //{
+        //    // Creating an instance of the TaskScheduler
+        //    TaskScheduler taskScheduler = new TaskScheduler();
 
-            // Submit various tasks asynchronously
-            Task.Run(() => SubmitTask(taskScheduler, "Urgent Task", TaskPriority.High));
-            Task.Run(() => SubmitTask(taskScheduler, "Important Task", TaskPriority.Normal));
-            Task.Run(() => SubmitTask(taskScheduler, "Regular Task", TaskPriority.Normal));
-            Task.Run(() => SubmitTask(taskScheduler, "Background Task", TaskPriority.Low));
+        //    // Submit various tasks asynchronously
+        //    Task.Run(() => SubmitTask(taskScheduler, "Urgent Task", TaskPriority.High));
+        //    Task.Run(() => SubmitTask(taskScheduler, "Important Task", TaskPriority.Normal));
+        //    Task.Run(() => SubmitTask(taskScheduler, "Regular Task", TaskPriority.Normal));
+        //    Task.Run(() => SubmitTask(taskScheduler, "Background Task", TaskPriority.Low));
 
-            Console.ReadLine(); // Keep the application running for asynchronous tasks to complete
-        }
+        //    Console.ReadLine(); // Keep the application running for asynchronous tasks to complete
+        //}
 
         // Method to submit tasks with specified priorities
         private static void SubmitTask(TaskScheduler taskScheduler, string taskName, TaskPriority priority)
